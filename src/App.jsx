@@ -1,26 +1,18 @@
 import React from "react";
-import axios from 'axios';
+import Row from "./Row";
+import request from "./Request";
 
+const action = request.actionMovies;
+const topMovies = request.topMovies;
 
-
-
-
-
-
-const fetchData = () => { 
-   axios.get('https://api.themoviedb.org/3/movie/popular?api_key=ba5e7823bbf4d4c2d17adf631af2bffa')
-   .then(res => {return res.data})}
-
-console.log(fetchData)
-
-    
 function App() {
   return (
-  <div className="App">
+    <div className="App">
       <header className="App-header">
-      
-      <h1> hello</h1>
-      
+        <Row title="Top movies" endpoint={topMovies} />
+        <Row title="Action movies" endpoint={action} />
+        <Row title="Scary movies" />
+        <Row title="Bad movies" />
       </header>
     </div>
   );
