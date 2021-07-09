@@ -12,8 +12,6 @@
 .imageRow {
   display: flex;
   margin: 10px;
-  overflow-x: scroll;
-  white-space: nowrap;
 }
 
 .pictures {
