@@ -2,23 +2,33 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const baseURL = "https://api.themoviedb.org/3/";
-const apiKey = "api_key=ba5e7823bbf4d4c2d17adf631af2bffa";
 
-function Row() {
+function Row(props) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(baseURL + "movie/popular?" + apiKey).then((res) => {
+    axios.get(baseURL + props.urlEndpoint).then((res) => {
       setData(res.data.results);
     });
   }, []);
 
   function imgPosting(i) {
-    return <img src={"https://image.tmdb.org/t/p/w200" + i.poster_path} />;
+    return (
+      <img
+        className="pictures"
+        src={"https://image.tmdb.org/t/p/original" + i.backdrop_path}
+      />
+    );
   }
 
   console.log(data);
-  return <div>{data.map(imgPosting)}</div>;
+  return (
+    <div className="genreRow">
+      <h2>{props.title}</h2>
+
+      <div className="imageRow">{data.map(imgPosting)}</div>
+    </div>
+  );
 }
 
 export default Row;

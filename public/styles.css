@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.genreRow h2 {
+  color: white;
+  margin: 10px;
+  padding-left: 10px;
+}
+
+.imageRow {
+  display: flex;
+  margin: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.pictures {
+  width: 250px;
+  padding-left: 10px;
+}
