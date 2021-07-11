@@ -23,6 +23,8 @@
   transition: 0.5s;
 }
 .pictures:hover {
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .btn {
