@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ScrollBtn from "./ScrollBtn";
 import axios from "axios";
 
 const baseURL = "https://api.themoviedb.org/3/";
@@ -12,21 +13,41 @@ function Row(props) {
     });
   }, []);
 
-  function imgPosting(i) {
-    return (
-      <img
-        className="pictures"
-        src={"https://image.tmdb.org/t/p/original" + i.backdrop_path}
-      />
-    );
+  function imgPoster(i) {
+    if (i.backdrop_path === null) {
+      return;
+    } else {
+      return (
+        <img
+          key={i.id}
+          className="pictures"
+          src={"https://image.tmdb.org/t/p/original" + i.backdrop_path}
+        />
+      );
+    }
   }
 
-  console.log(data);
+  function leftScroll() {
+    document.getElementById(props.title).scrollLeft -= 800;
+  }
+  function rightScroll() {
+    document.getElementById(props.title).scrollLeft += 800;
+  }
+
   return (
     <div className="genreRow">
       <h2>{props.title}</h2>
-
-      <div className="imageRow">{data.map(imgPosting)}</div>
+      <div className="btnrow">
+        <ScrollBtn icon="left" className="btn btnLeft" direction={leftScroll} />
+        <div className="imageRow" id={props.title}>
+          {data.map(imgPoster)}
+        </div>
+        <ScrollBtn
+          icon="right"
+          className="btn btnRight"
+          direction={rightScroll}
+        />
+      </div>
     </div>
   );
 }

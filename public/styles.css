@@ -11,10 +11,50 @@
 
 .imageRow {
   display: flex;
+  scroll-behavior: smooth;
   margin: 10px;
+  overflow-x: hidden;
+  width: auto;
 }
 
 .pictures {
   width: 250px;
   padding-left: 10px;
+  transition: 0.5s;
+}
+.pictures:hover {
+}
+
+.btn {
+  width: 10%;
+  color: white;
+  height: 141px;
+  margin-top: 10px;
+  border: whitesmoke solid 0px;
+  opacity: 0.05%;
+  transition: 1s;
+}
+
+.btnRight {
+  position: absolute;
+  right: 0px;
+}
+
+.btnLeft {
+  position: absolute;
+  left: 0px;
+}
+
+.btn:hover {
+  color: red;
+  background-color: black;
+}
+
+.btnrow {
+  display: flex;
+  width: 100%;
+}
+
+.btnrow:hover .btn {
+  opacity: 80%;
 }
