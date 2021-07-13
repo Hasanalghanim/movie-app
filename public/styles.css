@@ -1,25 +1,52 @@
 * {
   margin: 0;
   padding: 0;
+}
+html {
   background-color: black;
 }
-.genreRow h2 {
+.featureMovie {
+  height: 85vh;
   color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.featureMovie h1,
+small,
+p {
+  width: 50%;
+  margin-left: 5px;
+  padding: 10px;
+}
+.featureMovie h1 {
+  font-size: 3em;
+}
+.genreRow {
   margin: 10px;
-  padding-left: 10px;
+  padding: 15px;
+}
+.genreRow h2 {
+  width: 100%;
+  margin: 5px;
+  color: white;
+  justify-self: center;
 }
 
 .imageRow {
   display: flex;
   scroll-behavior: smooth;
-  margin: 10px;
   overflow-x: hidden;
   width: auto;
 }
 
 .pictures {
   width: 250px;
-  padding-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   transition: 0.5s;
 }
 .pictures:hover {
@@ -31,7 +58,7 @@
   width: 10%;
   color: white;
   height: 141px;
-  margin-top: 10px;
+  background-color: black;
   border: whitesmoke solid 0px;
   opacity: 0.05%;
   transition: 1s;
