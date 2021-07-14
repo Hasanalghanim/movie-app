@@ -7,10 +7,14 @@ const baseURL = "https://api.themoviedb.org/3/";
 function Row(props) {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios.get(baseURL + props.urlEndpoint).then((res) => {
+  async function getdata() {
+    await axios.get(baseURL + props.urlEndpoint).then((res) => {
       setData(res.data.results);
     });
+  }
+
+  useEffect(() => {
+    getdata();
   }, []);
 
   function imgPoster(i) {
