@@ -31,12 +31,14 @@ function FeatureMovie(props) {
   }
   randoChecker();
   return (
-    <div
-      style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/original${data[random]?.backdrop_path})`,
-      }}
-      className="featureMovie"
-    >
+    <div className="featureMovie">
+      <div className="featureImgoverlay"></div>
+      <img
+        className="featureImage"
+        src={
+          "https://image.tmdb.org/t/p/original" + data[random]?.backdrop_path
+        }
+      />
       <h1>{data[random]?.title}</h1>
       <small>{data[random]?.release_date.slice(0, 4)} </small>
       <p>{data[random]?.overview.substring(0, 200)}</p>

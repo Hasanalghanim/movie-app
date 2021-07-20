@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 function NavBar() {
+  const [Scroll, setScroll] = useState(true);
+
+  document.addEventListener("scroll", () => {
+    const yAxes = window.scrollY;
+    if (yAxes < 50) {
+      setScroll(true);
+      console.log("whiite");
+    } else {
+      setScroll(false);
+      console.log("black");
+    }
+  });
+  console.log(Scroll);
   return (
-    <div className="navBar">
+    <div className={Scroll ? "navBar" : "navBar Scrolling"}>
       <ul className="nav1">
         <span>LOGO</span>
         <li>

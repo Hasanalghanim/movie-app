@@ -27,12 +27,11 @@ function App() {
           <div>
             <Row title="Top" urlEndpoint={Requests.topMovies} />
             <Row title="Action" urlEndpoint={Requests.actionMovies} />
-            <Row title="Comady" urlEndpoint={Requests.TopRated} />
+            <Row title="Comedy" urlEndpoint={Requests.TopRated} />
             <Row title="Top" urlEndpoint={Requests.topMovies} />
             <Row title="Action" urlEndpoint={Requests.actionMovies} />
             <Row title="Comady" urlEndpoint={Requests.TopRated} />
           </div>
-          \
         </header>
       )}
     </div>
