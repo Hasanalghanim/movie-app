@@ -25,6 +25,7 @@ html {
 }
 .Scrolling {
   background-color: #101010;
+  opacity: 95%;
 }
 
 .navBar ul {
@@ -49,7 +50,7 @@ li {
 }
 
 .featureMovie {
-  height: 85vh;
+  height: 80vh;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,6 +64,7 @@ li {
   position: absolute;
   width: 100%;
   z-index: -5;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #101010 100%);
 }
 
 .featureImgoverlay {
@@ -72,7 +74,8 @@ li {
   width: 100%;
   opacity: 80%;
   background-color: #101010;
-  background-image: linear-gradient(rgba(16, 16, 16, 0), rgba(16, 16, 16, 1));
+
+  /* background-image: linear-gradient(rgba(16, 16, 16, 0), rgba(16, 16, 16, 1)); */
 }
 .featureMovie h1,
 small,
