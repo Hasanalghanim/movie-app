@@ -6,17 +6,14 @@ NETFLIX CLONE 📺
 This project is a work in progress.
 
 
-
+----
 Features:
 
-
 📺 Navbar which change its color when scroll
-
 📺 Random movies in the banner when refresh
-
 📺 Carousel of movies coming from the IMDB API
 
-
+----
 Topics:
  1. TMDB API
  2. Using an API in React
@@ -29,13 +26,13 @@ Topics:
  9. Async/Await
  10. React Hooks
 
-
+----
 Tech Stack:
  Front-End: React.Js
  Deplyment: Netlify 
 
 
-
+----
 Installation:
  Clone the repo in your terminal writting:
 
