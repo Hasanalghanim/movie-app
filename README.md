@@ -10,7 +10,9 @@ This project is a work in progress.
 Features:
 
 📺 Navbar which change its color when scroll
+
 📺 Random movies in the banner when refresh
+
 📺 Carousel of movies coming from the IMDB API
 
 ----
