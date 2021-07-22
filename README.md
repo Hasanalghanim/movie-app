@@ -7,14 +7,13 @@ This project is a work in progress.
 
 
 
-Features
-
+Features:
 📺 Navbar which change its color when scroll
 📺 Random movies in the banner when refresh
 📺 Carousel of movies coming from the IMDB API
 
 
-Topics :
+Topics:
  1. TMDB API
  2. Using an API in React
  3. Axios dependencie to make the requests
@@ -28,23 +27,23 @@ Topics :
 
 
 Tech Stack:
-Front-End: React.Js
-Deplyment: Netlify 
+ Front-End: React.Js
+ Deplyment: Netlify 
 
 
 
-Installation
-Clone the repo in your terminal writting:
+Installation:
+ Clone the repo in your terminal writting:
 
-$ git clone https://github.com/Hasanalghanim/movie-app
-In the project directory, you can run:
+ $ git clone https://github.com/Hasanalghanim/movie-app
+ In the project directory, you can run:
 
-npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+ npm start
+ Runs the app in the development mode.
+ Open http://localhost:3000 to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+ The page will reload if you make edits.
+ You will also see any lint errors in the console.
 
 
 
