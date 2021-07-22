@@ -16,6 +16,7 @@ function NavBar() {
   console.log(Scroll);
   return (
     <div className={Scroll ? "navBar" : "navBar Scrolling"}>
+      <h1> hello</h1>
       <ul className="nav1">
         <span>LOGO</span>
         <li>
