@@ -17,6 +17,7 @@ function NavBar() {
   return (
     <div className={Scroll ? "navBar" : "navBar Scrolling"}>
       <ul className="nav1">
+        <h1> hello</h1>
         <span>LOGO</span>
         <li>
           <a href="#">Home</a>
