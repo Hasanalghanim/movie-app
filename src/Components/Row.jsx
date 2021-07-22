@@ -22,11 +22,13 @@ function Row(props) {
       return;
     } else {
       return (
-        <img
-          key={i.id}
-          className="pictures"
-          src={"https://image.tmdb.org/t/p/original" + i.backdrop_path}
-        />
+        <div>
+          <img
+            key={i.id}
+            className="pictures"
+            src={"https://image.tmdb.org/t/p/original" + i.backdrop_path}
+          />
+        </div>
       );
     }
   }
@@ -37,15 +39,17 @@ function Row(props) {
   function rightScroll() {
     document.getElementById(props.title).scrollLeft += 800;
   }
-
+  console.log(data);
   return (
     <div className="genreRow">
       <h2>{props.title}</h2>
       <div className="btnrow">
         <ScrollBtn icon="left" className="btn btnLeft" direction={leftScroll} />
+
         <div className="imageRow" id={props.title}>
           {data.map(imgPoster)}
         </div>
+
         <ScrollBtn
           icon="right"
           className="btn btnRight"
