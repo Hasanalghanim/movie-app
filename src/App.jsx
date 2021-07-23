@@ -23,14 +23,13 @@ function App() {
       ) : (
         <header className="App-header">
           <NavBar />
-          <FeatureMovie urlEndpoint={Requests.topMovies} />
+          <FeatureMovie urlEndpoint={Requests.popular} />
           <div>
-            <Row title="Top" urlEndpoint={Requests.topMovies} />
+            <Row title="Trending" urlEndpoint={Requests.Trending} />
+            <Row title="Top Rated" urlEndpoint={Requests.TopRated} />
+            <Row title="Comedy" urlEndpoint={Requests.comedy} />
             <Row title="Action" urlEndpoint={Requests.actionMovies} />
-            <Row title="Comedy" urlEndpoint={Requests.TopRated} />
-            <Row title="Top" urlEndpoint={Requests.topMovies} />
-            <Row title="Action" urlEndpoint={Requests.actionMovies} />
-            <Row title="Comady" urlEndpoint={Requests.TopRated} />
+            <Row title="Romantic" urlEndpoint={Requests.Romantic} />
           </div>
         </header>
       )}

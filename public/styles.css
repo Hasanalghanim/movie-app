@@ -30,19 +30,38 @@ html {
 
 .navBar ul {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
 }
 .nav1 {
-  width: 50%;
-  margin-left: 0.313rem;
+  display: flex;
+  justify-self: flex-start;
+  width: 100%;
+  margin-left: 4rem;
   padding-left: 0.625rem;
+  justify-content: flex-start;
 }
 .nav2 {
-  width: 50%;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 4rem;
+}
+.searchBar {
+  width: 10rem;
+  border-radius: 1rem;
+  border: none;
+  height: 1.5rem;
+}
+.netflixLogo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 3rem;
+  transition: 0.6s;
+}
+.logoactive {
+  height: 2rem;
 }
 .navBar a,
-span,
 li {
   color: white;
   text-decoration: none;
@@ -74,21 +93,20 @@ li {
   width: 100%;
   opacity: 80%;
   background-color: #101010;
-
-  /* background-image: linear-gradient(rgba(16, 16, 16, 0), rgba(16, 16, 16, 1)); */
 }
+
 .featureMovie h1,
 small,
 p {
   width: 50%;
-  margin-left: 0.625rem;
+  margin-left: 4rem;
   padding: 0.625rem;
 }
 .featureMovie h1 {
   font-size: 3rem;
 }
 .genreRow {
-  margin: 0.625rem;
+  margin: 4rem;
   padding: 0.938rem;
 }
 .genreRow h2 {
