@@ -6,6 +6,7 @@
 
 html {
   background-color: #101010;
+  overflow-x: hidden;
 }
 .preLoader {
   display: flex;
@@ -135,17 +136,6 @@ li {
   width: auto;
 }
 
-@media screen and (max-width: 900px) {
-  .genreRow {
-    margin: 1rem;
-    padding: 0rem;
-  }
-  .imageRow {
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: auto;
-  }
-}
-
 .pictures {
   border-radius: 0.4rem;
   width: 15.625rem;
@@ -208,4 +198,25 @@ li {
 .CardContainer p {
   font-size: 0.8rem;
   word-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .featureMovie {
+    display: none;
+  }
+  .navBar {
+    z-index: 1;
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  .genreRow {
+    margin: 0rem;
+  }
+  .rowWrapper {
+    margin-top: 4rem;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }

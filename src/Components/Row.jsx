@@ -48,19 +48,25 @@ function Row(props) {
 
   return (
     <div className="genreRow">
-      <h2>{props.title}</h2>
-      <div className="btnrow">
-        <ScrollBtn icon="left" className="btn btnLeft" direction={leftScroll} />
+      <div className="rowWrapper">
+        <h2>{props.title}</h2>
+        <div className="btnrow">
+          <ScrollBtn
+            icon="left"
+            className="btn btnLeft"
+            direction={leftScroll}
+          />
 
-        <div className="imageRow" id={props.title}>
-          {data.map(imgPoster)}
+          <div className="imageRow" id={props.title}>
+            {data.map(imgPoster)}
+          </div>
+
+          <ScrollBtn
+            icon="right"
+            className="btn btnRight"
+            direction={rightScroll}
+          />
         </div>
-
-        <ScrollBtn
-          icon="right"
-          className="btn btnRight"
-          direction={rightScroll}
-        />
       </div>
     </div>
   );
