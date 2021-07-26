@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ScrollBtn from "./ScrollBtn";
 import axios from "axios";
+import HoverCard from "./HoverCard";
 
 const baseURL = "https://api.themoviedb.org/3/";
 
@@ -27,6 +28,11 @@ function Row(props) {
             key={i.id}
             className="pictures"
             src={"https://image.tmdb.org/t/p/original" + i.backdrop_path}
+          />
+          <HoverCard
+            backdrop_path={i.backdrop_path}
+            title={i.title}
+            details={i.overview}
           />
         </div>
       );
