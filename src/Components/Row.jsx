@@ -39,7 +39,7 @@ function Row(props) {
   function rightScroll() {
     document.getElementById(props.title).scrollLeft += 800;
   }
-  console.log(data);
+
   return (
     <div className="genreRow">
       <h2>{props.title}</h2>
