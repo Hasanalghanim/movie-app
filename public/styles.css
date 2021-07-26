@@ -69,38 +69,50 @@ li {
 }
 
 .featureMovie {
-  height: 80vh;
   color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .featureImage {
   position: absolute;
-  width: 100%;
-  z-index: -5;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #101010 100%);
+  width: 99vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .featureImgoverlay {
-  z-index: -4;
+  position: relative;
+}
+.featureImgoverlay::after {
+  content: "";
   position: absolute;
-  height: 50rem;
-  width: 100%;
-  opacity: 80%;
-  background-color: #101010;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 0.1) 0%,
+    rgba(16, 16, 16, 1) 80%
+  );
+  opacity: 1;
+  z-index: -1;
 }
 
-.featureMovie h1,
-small,
-p {
-  width: 50%;
+.featureMovieDetails {
+  flex-direction: column;
+  display: flex;
+  height: 60vh;
+  width: 40vw;
+  justify-content: center;
+  align-content: center;
+  margin-top: 4rem;
   margin-left: 4rem;
-  padding: 0.625rem;
+}
+.featureMovie small {
+  margin-block: 1rem;
 }
 .featureMovie h1 {
   font-size: 3rem;
@@ -119,8 +131,19 @@ p {
 .imageRow {
   display: flex;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: hidden;
   width: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .genreRow {
+    margin: 1rem;
+    padding: 0rem;
+  }
+  .imageRow {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: auto;
+  }
 }
 
 .pictures {
@@ -130,9 +153,8 @@ p {
   margin-right: 0.313rem;
   transition: 0.5s;
 }
-.pictures:hover {
-  margin-right: 0.938rem;
-  margin-left: 0.938rem;
+.pictures:hover + .HoverCard {
+  display: contents;
 }
 
 .btn {
@@ -166,4 +188,24 @@ p {
 
 .btnrow:hover .btn {
   opacity: 80%;
+}
+
+.HoverCard {
+  display: none;
+  transition: 1s;
+}
+
+.CardContainer {
+  color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: #242323;
+  padding: 0.5rem;
+  padding: 1rem;
+}
+.CardContainer h4 {
+  margin-bottom: 1rem;
+}
+.CardContainer p {
+  font-size: 0.8rem;
+  word-spacing: 0.1rem;
 }

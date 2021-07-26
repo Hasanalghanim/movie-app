@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ScrollBtn from "./ScrollBtn";
 import axios from "axios";
+import HoverCard from "./HoverCard";
 
 const baseURL = "https://api.themoviedb.org/3/";
 
@@ -28,6 +29,11 @@ function Row(props) {
             className="pictures"
             src={"https://image.tmdb.org/t/p/original" + i.backdrop_path}
           />
+          <HoverCard
+            backdrop_path={i.backdrop_path}
+            title={i.title}
+            details={i.overview}
+          />
         </div>
       );
     }
@@ -39,7 +45,7 @@ function Row(props) {
   function rightScroll() {
     document.getElementById(props.title).scrollLeft += 800;
   }
-  console.log(data);
+
   return (
     <div className="genreRow">
       <h2>{props.title}</h2>
