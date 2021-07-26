@@ -219,4 +219,7 @@ li {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
   }
+  .btn {
+    display: none;
+  }
 }
