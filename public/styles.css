@@ -111,13 +111,9 @@ li {
   margin-top: 4rem;
   margin-left: 4rem;
 }
-/* .featureMovie h1,
-small,
-p {
-  width: 50%;
-  margin-left: 4rem;
-  padding: 0.625rem;
-} */
+.featureMovie small {
+  margin-block: 1rem;
+}
 .featureMovie h1 {
   font-size: 3rem;
 }
